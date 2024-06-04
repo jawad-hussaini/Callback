@@ -1,26 +1,42 @@
-function pro(d){
+function pro(callback){
     setTimeout(()=>{
         console.log("I")
+        console.log("First");
+        callback()
+    },6000)
+}
+
+function prop(callback){
+    setTimeout(()=>{
+        console.log("Second");
+        callback()
+    },5000)
+}
+
+function prope(callback){
+    setTimeout(()=>{
+        console.log("Third");
+        callback()
+    },4000)
+}
+
+function proper(callback){
+    setTimeout(()=>{
+        console.log("Fourth");
+        callback()
     },3000)
-    console.log("First");
 }
 
-function prop(){
-    console.log("Second");
-}
+pro((callback)=>{
+    prop((callback)=>{
+        prope((callback)=>{
+            proper((callback)=>{
+                setTimeout(()=>{
+                    console.log("all done")
+                },3000);
+            });
+        });
+    });
+});
 
-function prope(){
-    console.log("third");
-}
 
-function proper(){
-    console.log("Fourth");
-}
-
-function propert(){
-    console.log("Fifth");
-}
-function property(){
-    console.log("Fifth");
-}
-pro();
