@@ -1,4 +1,7 @@
-function pro(){
+function pro(d){
+    setTimeout(()=>{
+        console.log("I")
+    },3000)
     console.log("First");
 }
 
@@ -17,8 +20,7 @@ function proper(){
 function propert(){
     console.log("Fifth");
 }
-pro(()=>{
-    prop(()=>{
-        
-    })
-})
+function property(){
+    console.log("Fifth");
+}
+pro();
