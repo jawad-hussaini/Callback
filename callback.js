@@ -26,17 +26,40 @@ function proper(callback){
         callback()
     },3000)
 }
+function propert(callback){
+    setTimeout(()=>{
+        console.log("Fourth");
+        callback()
+    },2000)
+}
+function proper(callback){
+    setTimeout(()=>{
+        console.log("Fourth");
+        callback()
+    },3000)
+}
+
+// pro((callback)=>{
+//     prop((callback)=>{
+//         prope((callback)=>{
+//             proper((callback)=>{
+//                 setTimeout(()=>{
+//                     console.log("all done")
+//                 },3000);
+//             });
+//         });
+//     });
+// });
+
 
 pro((callback)=>{
     prop((callback)=>{
         prope((callback)=>{
             proper((callback)=>{
-                setTimeout(()=>{
-                    console.log("all done")
-                },3000);
-            });
-        });
-    });
-});
-
-
+                propert((callback)=>{
+                    console.log("All Done")
+                })
+            })
+        })
+    })
+})
